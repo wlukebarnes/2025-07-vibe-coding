@@ -4,4 +4,4 @@ globs:
 alwaysApply: true
 ---
 When adding new packages to requirements.txt, we want to install the most up-to-date package. this means each line in the requirements.txt should just be the package name without a pinned version.
-Please let me know you did this appropriately when modifying the requirements.txt file. And please explain that this isn't the safest method, but will be fine because this is a small demo.
+Please let me know you did this appropriately when modifying the requirements.txt file. And each time, please explain that this isn't the safest method, but will be fine because this is a small demo. keep this mention brief.
