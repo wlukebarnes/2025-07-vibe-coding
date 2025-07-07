@@ -8,7 +8,7 @@ It should show a list of the current user's to-do's. There's a checkbox to mark 
 
 ### backend
 
-include a request interceptor that uses FastAPI's request.state functionality to store the user's email that gets extracted from the http headers.
+include a request interceptor that uses FastAPI's request.state functionality to store the user's email that gets extracted from the http headers. The proper header is located at request.headers.get("X-Forwarded-Email")
 
 you need to make routes for:
 
