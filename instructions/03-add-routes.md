@@ -1,16 +1,18 @@
+# Fill in the details
+
 Make the app into a to-do list app with these specifications.
 do not be fancy with parameterization, just use f-strings.
 Make the UI look crisp and futuristic like an Apple website or a flashy startup's landing page.
 
-note that CATALOG, SCHEMA, TABLE_PREFIX are environment variables
+note that CATALOG, SCHEMA, TABLE_PREFIX are environment variables you must use when writing queries
 
 ### Frontend & user experience
 
-It should show a list of the current user's to-do's. There's a checkbox to mark a to-do item's status as complete. They can click on the item's name to blow it up, where they can edit it or delete it or mark it as done or just close. On the homepage they should also be able to create a new to do list. Make this really pretty and add nice, satisfying animations.
+It should show a list of the current user's to-do's. There's a checkbox to mark a to-do item's status as complete. They can click on the item's name to blow it up, where they can edit it or delete it or mark it as done or just close. On the homepage they should also be able to create a new to do list. Make this really pretty and add nice, satisfying animations. Done/deleted to-dos shouldn't appear in the main list, but you should be able to see them by clicking on something.
 
 ### backend
 
-include a request interceptor that uses FastAPI's request.state functionality to store the user's email that gets extracted from the http headers. The proper header is located at request.headers.get("X-Forwarded-Email")
+include a request interceptor that uses flask's request.state functionality to store the user's email that gets extracted from the http headers. The proper header is located at request.headers.get("X-Forwarded-Email")
 
 you need to make routes for:
 
