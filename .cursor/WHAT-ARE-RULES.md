@@ -8,7 +8,7 @@ Cursor rules are defined in .mdc files like:
 
 -   `.cursorrules/` - Main rules file for the project (deprecated, but still work for now)
 -   `.cursor/rules/` Project-wide directory that contains various .mdc configuration files that apply to the entire project
--   `*/.cursor/rules/` For folder-scoped rules (e.g., ability to specify different rules for backend/ and frontend/)
+-   `*/.cursor/rules/` For folder-scoped rules (e.g., ability to specify different rules for frontend/)
 
 ## Common Rule Types
 
