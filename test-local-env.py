@@ -163,11 +163,11 @@ def main():
     """Main test function."""
     print("🧪 Running test script...\n")
 
-    # Test package imports
-    packages_ok = test_package_imports()
-
     # Test Python environment
     python_ok = test_python_environment()
+
+    # Test package imports
+    packages_ok = test_package_imports()
 
     # Test .env file
     env_ok = test_env_file()
