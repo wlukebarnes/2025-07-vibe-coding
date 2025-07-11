@@ -1,7 +1,6 @@
 ---
-description: make sure cursor doesn't pin random versions of packages
-globs:
-alwaysApply: true
+globs: requirements.txt
+alwaysApply: false
 ---
 
 When adding new packages to requirements.txt, we want to install the most up-to-date package. this means each line in the requirements.txt should just be the package name without a pinned version.
