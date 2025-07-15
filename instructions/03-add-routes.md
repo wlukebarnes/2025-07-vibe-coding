@@ -8,7 +8,7 @@ note that CATALOG, and TABLE_PREFIX are environment variables you must use when 
 
 ### Frontend & user experience
 
-It should show a list of the current user's to-do's. There's a checkbox to mark a to-do item's status as complete. They can click on the item's name to blow it up, where they can edit it or delete it or mark it as done or just close. On the homepage they should also be able to create a new to do list. Done/deleted to-dos shouldn't appear in the main list, but you should be able to see them by clicking on something.
+It should show a list of the current user's to-do's. There's a checkbox to mark a to-do item's status as complete. They can click on the item's name to blow it up, where they can edit it or delete it or mark it as done or just close. On the homepage they should also be able to create a new to do list. Completed/deleted to-dos shouldn't appear in the main list, but you should be able to see them by clicking on something.
 
 ### backend
 
