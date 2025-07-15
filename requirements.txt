@@ -1,5 +1,5 @@
 Flask
 python-dotenv
-uvicorn
 databricks-sdk
 databricks-sql-connector
+gunicorn

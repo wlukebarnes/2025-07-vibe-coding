@@ -8,7 +8,7 @@ def test_package_imports():
     packages = [
         "flask",
         "dotenv",
-        "uvicorn",
+        "gunicorn",
         "databricks.sdk",
         "databricks.sql",
     ]

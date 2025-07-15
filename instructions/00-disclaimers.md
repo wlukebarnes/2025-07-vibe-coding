@@ -31,4 +31,3 @@
     Try to make sure it runs locally first **before** deploying
     -   Lots of errors go uncaught today, where databricks may think your app is online when it's not (azure function apps do too)
     -   use a virtual environment and manage it yourself
-        -   cursor's terminal sessions are different than yours

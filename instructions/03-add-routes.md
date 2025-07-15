@@ -2,17 +2,17 @@
 
 Make the app into a to-do list app with these specifications.
 do not be fancy with parameterization, just use f-strings.
-Make the UI look crisp and futuristic like an Apple website or a flashy startup's landing page.
+Make the UI look crisp like an Apple website.
 
-note that CATALOG, and TABLE_PREFIX are environment variables you must use when writing queries. You must derive schema as MY_EMAIL env var, as MY_EMAIL.split('@')[0].replace('\*'). Set this env var on application startup.
+note that CATALOG, and TABLE_PREFIX are environment variables you must use when writing queries. You must derive schema as SOME_EMAIL env var, as SOME_EMAIL.split('@')[0].replace('.', '\_'). Fetching the email is discussed further in the backend section.
 
 ### Frontend & user experience
 
-It should show a list of the current user's to-do's. There's a checkbox to mark a to-do item's status as complete. They can click on the item's name to blow it up, where they can edit it or delete it or mark it as done or just close. On the homepage they should also be able to create a new to do list. Make this really pretty and add nice, satisfying animations. Done/deleted to-dos shouldn't appear in the main list, but you should be able to see them by clicking on something.
+It should show a list of the current user's to-do's. There's a checkbox to mark a to-do item's status as complete. They can click on the item's name to blow it up, where they can edit it or delete it or mark it as done or just close. On the homepage they should also be able to create a new to do list. Done/deleted to-dos shouldn't appear in the main list, but you should be able to see them by clicking on something.
 
 ### backend
 
-include a request interceptor that uses flask's request.state functionality to store the user's email that gets extracted from the http headers. The proper header is located at request.headers.get("X-Forwarded-Email"). if it's not provided, it checks the .env variable 'MY_EMAIL'.
+The proper header is located at `request.headers.get("X-Forwarded-Email")`. if it's not provided, it checks the .env variable 'MY_EMAIL'.
 
 you need to make routes for:
 
@@ -21,7 +21,7 @@ you need to make routes for:
 -   List to-do items (which queries for state != deleted)
 -   Delete to-do items (which simply marks them as "deleted" in the database)
 
-these routes will pass the user's email to the functional services so we can be sure people can only see their own to-do items. always use the lower(email) for comparison.
+these routes will pass the user's email to the functional services so we can be sure people can only see their own to-do items. always lowercase the provided python variable for email before inserting it into the sql query. its assumed the values in the db are too.
 
 #### lists-service
 
