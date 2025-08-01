@@ -1,11 +1,3 @@
-## Agenda
-
-1. Disclaimers
-2. Demo
-    - very quick product walkthrough
-    - build a "to do list" app
-3. hands on! build away, i'll be here for questions
-
 ## Disclaimers
 
 1.  This does not build production-ready apps.
@@ -13,7 +5,7 @@
     -   Quality degrades quickly as the project becomes more complex, or the more libraries used
         -   Unfortunate, because LLMs love to write complex code and use lots of libraries
         -   Can mitigate by manually feeding specific context
-    -   ... but does that matter for us? its fantastic at mocking up the "art of the possible"
+    -   ... but does that matter for the field? its fantastic at mocking up the "art of the possible"
 2.  \_
     Treat it like a video game: save early, save often
     -   As you'll see, cursor takes control of your codebase

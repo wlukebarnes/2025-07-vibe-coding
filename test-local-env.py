@@ -6,9 +6,8 @@ from pathlib import Path
 def test_package_imports():
     """Test if all required packages can be imported successfully."""
     packages = [
-        "flask",
+        "fastapi",
         "dotenv",
-        "gunicorn",
         "databricks.sdk",
         "databricks.sql",
     ]

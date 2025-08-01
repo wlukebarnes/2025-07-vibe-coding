@@ -1,5 +1,4 @@
-Flask
+fastapi
 python-dotenv
 databricks-sdk
 databricks-sql-connector[pyarrow]
-gunicorn

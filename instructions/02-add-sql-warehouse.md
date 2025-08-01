@@ -2,7 +2,7 @@ https://docs.databricks.com/aws/en/dev-tools/python-sql-connector#:~:text=from%2
 
 # Add a Databricks SQL Warehouse
 
-Add a sql-warehouse service to the flask app that connects to a databricks SQL warehouse using m2m auth like in the link.
+Add a sql-warehouse service to the FastAPI app that connects to a databricks SQL warehouse using m2m auth like in the link.
 Note, you will need to construct the HTTP_PATH yourself from the warehouse id
 add a button on the homepage that queries 'SELECT CURRENT_TIMESTAMP()' from the warehouse to test it, then displays the result in the UI.
 
@@ -28,6 +28,7 @@ def credential_provider():
 
 with sql.connect(server_hostname = server_hostname,
     http_path = os.getenv("DATABRICKS_HTTP_PATH"),
+    # Take special care to notice credentials_provider is a parameter that takes the function credential_provider as an argument. Not the output of credential_provider, but the function is the argument.
     credentials_provider = credential_provider) as connection:
         # this connection should be stored
 ```
