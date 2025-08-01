@@ -8,8 +8,6 @@ add a button on the homepage that queries 'SELECT CURRENT_TIMESTAMP()' from the 
 
 use DATABRICKS_HOST and the DATABRICKS_WAREHOUSE_ID to construct the warehouse's endpoint, instead of SERVER_HOSTNAME or HTTP_PATH which the docs use. note DATABRICKS_HOST already has the https:// at the front.
 
-keep a single cursor open in the connection and expose that. checking out a cursor per query is too slow for us in this demo.
-
 ## code sample from website for M2M auth. note, our setup slightly differs, as mentioned above
 
 ```python

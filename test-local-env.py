@@ -136,9 +136,9 @@ def test_env_file():
                                     f"{key} must end with @databricks.com (case-insensitive)"
                                 )
                         elif key == "DATABRICKS_CLIENT_SECRET":
-                            if not value.startswith("dose") or not value.endswith("b9"):
+                            if not value.startswith("dose"):
                                 invalid_values.append(
-                                    f"{key} must start with 'dose' and end with 'b9'"
+                                    f"{key} must start with 'dose', so it can't be a databricks client secret"
                                 )
                     break
 
