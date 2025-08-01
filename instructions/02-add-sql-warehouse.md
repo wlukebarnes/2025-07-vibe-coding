@@ -10,7 +10,7 @@ use DATABRICKS_HOST and the DATABRICKS_WAREHOUSE_ID to construct the warehouse's
 
 keep a single cursor open in the connection and expose that. checking out a cursor per query is too slow for us in this demo.
 
-## code sample from website for M2M auth. note, our setup slightly differs as mentioned above
+## code sample from website for M2M auth. note, our setup slightly differs, as mentioned above
 
 ```python
 from databricks.sdk.core import Config, oauth_service_principal
@@ -26,7 +26,8 @@ def credential_provider():
         client_secret = os.getenv("DATABRICKS_CLIENT_SECRET"))
     return oauth_service_principal(config)
 
-with sql.connect(server_hostname = server_hostname,
+with sql.connect(
+    server_hostname = server_hostname,
     http_path = os.getenv("DATABRICKS_HTTP_PATH"),
     # Take special care to notice credentials_provider is a parameter that takes the function credential_provider as an argument. Not the output of credential_provider, but the function is the argument.
     credentials_provider = credential_provider) as connection:
