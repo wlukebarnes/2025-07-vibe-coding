@@ -2,17 +2,17 @@
 
 Make the app into a to-do list app with these specifications.
 do not be fancy with parameterization, just use f-strings.
-Make the UI look crisp like an Apple website.
+Make the UI look crisp - minimalistic yet aesthetically pleasing.
 
-note that CATALOG, and TABLE_PREFIX are environment variables you must use when writing queries. You must derive schema as SOME_EMAIL env var, as SOME_EMAIL.split('@')[0].replace('.', '\_'). Fetching the email is discussed further in the backend section.
+note that CATALOG, and TABLE_PREFIX are environment variables you must use when writing queries. You must derive schema as MY_EMAIL env var, as MY_EMAIL.split('@')[0].replace('.', '\_'). Sometimes, this will be provided in a header instead and you will need to fetch it from there, which is explained in the backend section.
 
 ### Frontend & user experience
 
-It should show a list of the current user's to-do's. There's a checkbox to mark a to-do item's status as complete. They can click on the item's name to blow it up, where they can edit it or delete it or mark it as done or just close. On the homepage they should also be able to create a new to do list. Completed/deleted to-dos shouldn't appear in the main list, but you should be able to see them by clicking on something. Be sure to collect title and description from the user.
+It should show a list of the current user's to-do's. There's a checkbox to mark a to-do item's status as complete. They can click on the item's name to blow it up, where they can edit it or delete it or mark it as done or just close. On the homepage they should also be able to create a new to do list. Completed/deleted to-dos shouldn't appear in the main list, but you should be able to see them by clicking on another tab to show all. Use HTML's new control flow syntax if you need it to simplify your code. Be sure to collect title and description from the user.
 
 ### backend
 
-The proper header is located at `request.headers.get("X-Forwarded-Email")`. if it's not provided, it checks the .env variable 'MY_EMAIL'.
+The proper header to check for the email is located at `request.headers.get("X-Forwarded-Email")`. if it's not provided, it checks the .env variable 'MY_EMAIL'. This is the input to table's schema calculation, which is described above
 
 you need to make routes for:
 
